@@ -6,13 +6,17 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:56:08 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/16 01:30:27 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/16 01:32:04 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	philo
 
-GCC				=	gcc
+ifeq ($(UNAME_S),Linux)
+	CC					=	clang-9
+else
+	CC					=	clang
+endif
 
 FLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
 # FLAGS			=	-Wall -Wextra -Werror
@@ -60,7 +64,7 @@ $(NAME): $(OBJS) $(HEADER)
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 	@ mkdir -p $(OBJS_DIR)
-	@ $(GCC) $(FLAGS) -I $(HEADER_DIR) -c -o $@ $<
+	@ $(CC) $(FLAGS) -I $(HEADER_DIR) -c -o $@ $<
 	@ printf "\033[31mProgram \033[32m%s: \033[34mCompilation of \033[36m%-30s\033[0m\r" $(NAME) $(notdir $<)
 
 clean:
