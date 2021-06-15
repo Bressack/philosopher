@@ -6,16 +6,16 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:56:08 by tharchen          #+#    #+#              #
-#    Updated: 2021/05/23 13:55:28 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/16 01:30:27 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	philo_one
+NAME			=	philo
 
 GCC				=	gcc
 
-# FLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
-FLAGS			=	-Wall -Wextra -Werror -Ofast
+FLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
+# FLAGS			=	-Wall -Wextra -Werror
 
 # **************************************************************************** #
 
@@ -36,7 +36,9 @@ SRCS_LIST		=	\
 					error.c \
 					init.c \
 					simulation.c \
+					eatting.c \
 					tools.c \
+					utils.c \
 
 SRCS			=	$(addprefix $(SRCS_DIR), $(SRCS_LIST))
 

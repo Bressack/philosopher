@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 11:07:58 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 00:57:34 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 01:22:14 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include <sys/time.h>
 # include <color_shell.h>
 
+# define INT_MAX		2147483647
 # define ERROR_FRONT	C_G_RED"error: "C_RES
 # define USAGE		"number_of_philosopher time_to_die time_to_eat time_to_slee\
 p number_of_time_each_philosophers_must_eat"
@@ -94,6 +95,7 @@ int		error(char *msg);
 /*
 ** SIMULATION
 */
+void	eatting(t_philo *philo);
 int		simulation(t_info *info);
 /*
 ** TOOLS
@@ -103,4 +105,8 @@ long	ft_atol(const char *str);
 long	gettime(void);
 void	print_state(t_info *info, int id, char *msg, char *color);
 void	ft_usleep(t_info *info, long t);
+/*
+** UTILS
+*/
+int		ft_strlen(char *s);
 #endif

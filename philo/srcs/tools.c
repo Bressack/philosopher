@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 12:14:55 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/23 14:38:07 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 01:29:51 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,6 @@ void		ft_usleep(t_info *info, long t)
 	{
 		if (gettime() - start >= t)
 			break ;
-		usleep(150);
+		usleep(50);
 	}
 }

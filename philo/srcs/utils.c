@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/22 12:15:04 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 01:15:09 by tharchen         ###   ########.fr       */
+/*   Created: 2021/06/16 01:21:10 by tharchen          #+#    #+#             */
+/*   Updated: 2021/06/16 01:21:58 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-int	main(int ac, char **av)
+int		ft_strlen(char *s)
 {
-	t_info	info;
+	int	i;
 
-	if (init(&info, ac, av) == FAILURE)
-		return (FAILURE);
-	if (simulation(&info) == FAILURE)
-		return (FAILURE);
-	return (0);
+	i = 0;
+	while (s && s[i])
+		i++;
+	return (i);
 }

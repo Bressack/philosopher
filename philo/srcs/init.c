@@ -6,13 +6,13 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 12:14:29 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/23 14:32:49 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 01:14:57 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-void		get_arg(int *errorno, int *dest, char *src)
+void	get_arg(int *errorno, int *dest, char *src)
 {
 	long	tmp;
 
@@ -32,7 +32,7 @@ void		get_arg(int *errorno, int *dest, char *src)
 	*dest = (int)tmp;
 }
 
-int		init_mutexes(t_info *info)
+int	init_mutexes(t_info *info)
 {
 	int	i;
 
@@ -52,7 +52,8 @@ int		init_mutexes(t_info *info)
 		return (error(MUTEX_INIT));
 	return (SUCCESS);
 }
-int		init_philos(t_info *info)
+
+int	init_philos(t_info *info)
 {
 	int	i;
 
@@ -73,38 +74,7 @@ int		init_philos(t_info *info)
 	return (SUCCESS);
 }
 
-// int		init(t_info *info, int ac, char **av)
-// {
-// 	int	errorno;
-//
-// 	errorno = 0;
-// 	if (ac < 5 || ac > 7)
-// 		return (error(INVALID_ARG_COUNT));
-// 	get_arg(&errorno, &info->philo_count, av[1]);
-// 	get_arg(&errorno, &info->time_die, av[2]);
-// 	get_arg(&errorno, &info->time_eat, av[3]);
-// 	get_arg(&errorno, &info->time_sleep, av[4]);
-// 	if (errorno)
-// 		return (FAILURE);
-// 	info->meal_limit = -1; // disable
-// 	info->color_opt = 0;
-// 	if (ac >= 6 && !strcmp(av[5], "-c"))
-// 		info->color_opt = 1;
-// 	else if (ac >= 6)
-// 		info->meal_limit = ft_atol(av[5]);
-// 	if (info->philo_count < 2)
-// 		return (error(NOT_ENOUGH_PHILO));
-// 	info->stop_simulation = 0;
-// 	if (!info->color_opt && ac >= 7 && !strcmp(av[6], "-c"))
-// 		info->color_opt = 1;
-// 	if (init_mutexes(info) == FAILURE)
-// 		return (FAILURE);
-// 	if (init_philos(info) == FAILURE)
-// 		return (FAILURE);
-// 	return (SUCCESS);
-// }
-
-int		init(t_info *info, int ac, char **av)
+int	init(t_info *info, int ac, char **av)
 {
 	int	errorno;
 
@@ -116,7 +86,7 @@ int		init(t_info *info, int ac, char **av)
 	get_arg(&errorno, &info->time_die, av[2]);
 	get_arg(&errorno, &info->time_eat, av[3]);
 	get_arg(&errorno, &info->time_sleep, av[4]);
-	info->meal_limit = -1; // disable
+	info->meal_limit = -1;
 	if (ac >= 6)
 		get_arg(&errorno, &info->meal_limit, av[5]);
 	if (errorno)
