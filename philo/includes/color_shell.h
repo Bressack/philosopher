@@ -6,13 +6,12 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 09:59:44 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/23 12:48:30 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 00:58:57 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLOR_SHELL_H
 # define COLOR_SHELL_H
-# include <libc.h>
 /*
 ** color letters
 */
@@ -24,7 +23,7 @@
 # define C_MAGENTA		"\033[35m"
 # define C_CYAN			"\033[36m"
 # define C_WHITE		"\033[37m"
-# define C_GRAY			"\033[90m"
+# define C_GREY			"\033[90m"
 /*
 ** color letters Gras
 */
@@ -36,7 +35,7 @@
 # define C_G_MAGENTA	"\033[35;01m"
 # define C_G_CYAN		"\033[36;01m"
 # define C_G_WHITE		"\033[37;01m"
-# define C_G_GRAY		"\033[90;01m"
+# define C_G_GREY		"\033[90;01m"
 /*
 ** color background
 */
@@ -48,16 +47,28 @@
 # define C_B_MAGENTA	"\033[45m"
 # define C_B_CYAN		"\033[46m"
 # define C_B_WHITE		"\033[47m"
-# define C_B_GRAY		"\033[100m"
+# define C_B_GREY		"\033[100m"
 
 /*
 ** default color reset
 */
 # define C_RES			"\033[0m"
+
+//
+//
+// ////////////////////////////////////////////////////////////////////////// //
+//
+// DEBUG
+//
+// ////////////////////////////////////////////////////////////////////////// //
+
 /*
 ** DEBUG printf(TEST);
 */
-# define MINUS_STR	"----------------------------------------------------------------------------------------------------"
-# define TEST "\033[36;01m(%s) \033[31;01m%s\033[0m %.*s>\033[35;01m %d\033[0m\n", __FILE__, __FUNCTION__, (int)(70 - (strlen(__FUNCTION__) + strlen(__FILE__) + 3)), MINUS_STR, __LINE__
+// # define MINUS_STR	"----------------------------------------------------
+//------------------------------------------------"
+//# define TEST "\033[36;01m(%s) \033[31;01m%s\033[0m %.*s>\033[35;01m %d\033[
+//0m\n", __FILE__, __FUNCTION__, (int)(70 - (ft_strlen(__FUNCTION__) +
+//ft_strlen(__FILE__) + 3)), MINUS_STR, __LINE__
 
 #endif
