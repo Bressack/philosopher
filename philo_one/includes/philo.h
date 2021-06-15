@@ -6,13 +6,20 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 11:07:58 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/23 14:33:07 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 00:55:24 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
-# include <libc.h>
+# include <unistd.h>
+# include <sys/types.h>
+# include <stdarg.h>
+# include <strings.h>
+# include <sys/uio.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <fcntl.h>
 # include <pthread.h>
 # include <sys/time.h>
 # include <color_shell.h>
