@@ -6,16 +6,18 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:56:08 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/16 01:32:04 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/16 01:34:08 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	philo
 
+UNAME_S			=	$(shell uname -s)
+
 ifeq ($(UNAME_S),Linux)
-	CC					=	clang-9
+	CC			=	clang-9
 else
-	CC					=	clang
+	CC			=	clang
 endif
 
 FLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
