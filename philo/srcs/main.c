@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 12:15:04 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 02:54:39 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 02:57:03 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	main(int ac, char **av)
 		exit(FAILURE);
 	if (simulation(&info) == FAILURE)
 		exit(FAILURE);
-	return (0);
+	exit(0);
 }
