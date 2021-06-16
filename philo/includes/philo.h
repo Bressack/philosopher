@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 11:07:58 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 02:35:12 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 02:36:45 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@
 # define THREAD_CREATE			"unable to create thread"
 # define MUTEX_INIT				"unable to init mutex"
 # define MALLOC_ERROR			"unable to allocate more memory"
-# define NOT_ENOUGH_PHILO		"not enough philosophers to start the simulation"
+# define NOT_ENOUGH_PHILO	"not enough philosophers to start the simulation"
 # define INVALID_ARG_COUNT		"invalid argument count"
 # define INVALID_NUMBER			"argument not a number"
 # define NUMBER_OUT_OF_RANGE	"argument value out of range"
@@ -52,7 +52,7 @@ typedef enum e_error_ret
 	SUCCESS	= 0
 }				t_error_ret;
 
-struct s_philo;
+struct	s_philo;
 
 typedef struct s_info
 {
