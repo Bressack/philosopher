@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 02:46:51 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/16 02:48:27 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/16 02:49:22 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,4 +16,5 @@ STOP=0
 while (( $STOP == 0 )); do
 	./philo 4 410 2 4 4
 	STOP=$?
+	echo "RES: " $?
 done
