@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:56:08 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/16 01:34:08 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/16 01:42:38 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ else
 	CC			=	clang
 endif
 
-FLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
+FLAGS			=	-Wall -Wextra -Werror -Ofast
 # FLAGS			=	-Wall -Wextra -Werror
 
 # **************************************************************************** #

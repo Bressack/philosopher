@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 12:14:29 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 01:14:57 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 02:28:01 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	init(t_info *info, int ac, char **av)
 
 	errorno = 0;
 	info->color_opt = 0;
-	if (ac < 5 || ac > 7)
+	if (ac < 5 || ac > 6)
 		return (error(INVALID_ARG_COUNT));
 	get_arg(&errorno, &info->philo_count, av[1]);
 	get_arg(&errorno, &info->time_die, av[2]);
