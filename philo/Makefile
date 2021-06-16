@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:56:08 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/16 01:42:38 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/16 02:31:00 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,9 @@ $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 	@ mkdir -p $(OBJS_DIR)
 	@ $(CC) $(FLAGS) -I $(HEADER_DIR) -c -o $@ $<
 	@ printf "\033[31mProgram \033[32m%s: \033[34mCompilation of \033[36m%-30s\033[0m\r" $(NAME) $(notdir $<)
+
+norm:
+	norminette $(SRCS) $(HEADER)
 
 clean:
 	@ rm -rf $(OBJS_DIR)

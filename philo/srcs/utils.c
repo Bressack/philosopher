@@ -6,13 +6,13 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 01:21:10 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 01:21:58 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 02:32:33 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-int		ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
 	int	i;
 

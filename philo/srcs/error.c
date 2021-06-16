@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 12:14:48 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 01:13:42 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/16 02:34:41 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ void	print_things(int fd, int nb_things, ...)
 
 int	error(char *msg)
 {
+	write(2, C_G_RED, ft_strlen(C_G_RED));
 	write(2, ERROR_FRONT, ft_strlen(ERROR_FRONT));
+	write(2, C_RES, ft_strlen(C_RES));
 	write(2, msg, ft_strlen(msg));
 	write(2, "\n", 1);
 	return (FAILURE);
