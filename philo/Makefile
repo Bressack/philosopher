@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:56:08 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/16 02:52:41 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/16 03:12:02 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ else
 endif
 
 # FLAGS			=	-Wall -Wextra -Werror -Ofast
-FLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
+FLAGS			=	-Wall -Wextra -Werror -Ofast -g3 -fsanitize=address
 
 # **************************************************************************** #
 
